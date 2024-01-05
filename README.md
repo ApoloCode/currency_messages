@@ -1,0 +1,1 @@
+Proyecto de Data Engineer en cual se consigue información a traves de una API de la conversion de ciertas divisas a pesos mexicanos (MXN) para despues procesarse y enviar un mensaja a traves de Whatsapp con la información procesada
