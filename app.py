@@ -1,6 +1,6 @@
 import os
 from twilio.rest import Client
-from configuration import TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN, PHONE_NUMBER, API_KEY_CURRENCY
+from configuration import TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN, PHONE_NUMBER, API_KEY_CURRENCY, PHONE_NUMBER_RECIVE
 import time
 
 from requests import Request, Session
@@ -40,7 +40,7 @@ def send_message(TWILIO_ACCOUNT_SID,TWILIO_AUTH_TOKEN,data):
     message = client.messages.create(
         from_='whatsapp:+14155238886',
         body='Los tipos de cambio para el dia de hoy a pesos mexicanos (MXN) son los siguientes: \n\n'+monedas+'Que tengas un buen dia!',
-        to='whatsapp:+5215536475137'
+        to='whatsapp:+'+PHONE_NUMBER_RECIVE
     )
     
     return message.sid
